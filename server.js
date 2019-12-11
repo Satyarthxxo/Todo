@@ -7,8 +7,7 @@ let app = express()
 let db
 
 app.use(express.static('public'))
-let connectionString = 'mongodb+srv://todoAppUser7:7579131356@cluster0-rjvd0.mongodb.net/test?retryWrites=true&w=majority'
-
+let connectionString = ''
 //This tells mongoDB where or what we want to connect to
 mongodb.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true }, function (err, client) {
   db = client.db() //this will select our mongodb database
